@@ -1,37 +1,44 @@
-function calculateinvoice(starterPrice, maindishPrice, dessertPrice, beveragePrice) {
-    let invoice = (starterPrice + maindishPrice + dessertPrice + beveragePrice);
-    let invoicetwo = (starterPrice + maindishPrice)
-    let invooiceThree = (dessertPrice + starterPrice)
-    return [invoice, invoicetwo, invooiceThree];
 
 
+var starter = 10.95;
+var main = 15.50;
+var dessert = 12.95;
+var beverage = 10.95;
+
+const calculateInvoice = (starterPrice, maindishPrice, dessertPrice, beveragePrice) => {
+
+    return (starterPrice + maindishPrice + dessertPrice + beveragePrice)
+}
+console.log(calculateInvoice(starter, main, dessert, beverage));
+
+
+
+
+
+var poriyal = 12.95;
+var salmonVeggies = 15.50;
+var sunnyLemon = 12.95;
+var guinness = 10.95;
+console.log(calculateInvoice(poriyal, salmonVeggies, sunnyLemon, guinness));
+
+
+var suppe = 2;
+var kebab = 11;
+var brownies = 1;
+var cola = 1.5;
+console.log(calculateInvoice(suppe, kebab, brownies, cola));
+
+var smkdSalmon = 2.5;
+var teriyaki = 14;
+var icecream = 2;
+var iMartini = 2;
+console.log(calculateInvoice(smkdSalmon, teriyaki, icecream, iMartini));
+
+
+const sdtInvoice = (starterPrice, maindishPrice, dessertPrice, beveragePrice) => {
+    var std = (starterPrice + maindishPrice + dessertPrice) - ((starterPrice + maindishPrice + dessertPrice) / 10)
+
+    return (std + beveragePrice)
 }
 
-let [total, total2, total3] = calculateinvoice(12.95, 15.50, 10.95, 15.95);
-console.log(total, total2, total3);
-
-
-
-function calculateinvoice(starterPrice, maindishPrice, dessertPrice, beveragePrice) {
-    let invoice = (starterPrice + maindishPrice + dessertPrice + beveragePrice);
-    let invoicetwo = (starterPrice + maindishPrice)
-    let invooiceThree = (dessertPrice + starterPrice)
-    let discountproducts = (dessertPrice + starterPrice + maindishPrice + beveragePrice);
-    discountprice = (discountproducts - beveragePrice);
-    discountprice = (discountprice * 0.10);
-    discountotal = (discountprice * 9);
-    discountprice = (discountproducts - beveragePrice - dessertPrice);
-    discountprice = (discountprice * 0.10);
-    discountotal2 = (discountprice * 9);
-    discountprice = (discountproducts - maindishPrice - dessertPrice - beveragePrice);
-    discountprice = (discountprice * 0.10);
-    discountotal3 = (discountprice * 9);
-
-
-    return [invoice, invoicetwo, invooiceThree, discountprice, discountotal, discountotal2, discountotal3];
-
-
-}
-
-let [total, total2, total3, total4, total5, total6, total7] = calculateinvoice(12.95, 15.50, 10.95, 15.95);
-console.log(total5, total6, total7);
+console.log(sdtInvoice(smkdSalmon, teriyaki, icecream, iMartini));
